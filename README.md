@@ -78,7 +78,6 @@ Differential Expression Analysis: Identify differentially expressed genes betwee
 
 Visualization: Visualize analysis results using various plotting techniques including heatmaps, scatterplots, violin plots, and feature plots.
 
-For detailed instructions on running each script and workflow, refer to the README files and documentation provided within each directory.
 
 # Workflow Overview
 
