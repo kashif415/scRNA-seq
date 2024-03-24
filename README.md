@@ -38,16 +38,28 @@ High-performance computing resources may be required for large datasets
 
 Clone this repository to your local machine:
 
-git clone 
-Install required R packages:
+git clone https://github.com/kashif415/scRNA-seq.git
 
-R
-Copy code
+# Install required R packages:
+
 install.packages("BiocManager")
-BiocManager::install(c("Seurat", "scran", ...))  # Add additional packages as needed
+
+BiocManager::install(c(ggplot2", "sctransform",
+          "devtools", "cowplot", "matrixStats",
+          "ggbeeswarm", "ggnewscale", "msigdbr", "bit64", "scater",
+          "AnnotationDbi",
+          "SingleR", "clusterProfiler", "celldex",
+          "dittoSeq", "DelayedArray",
+          "DelayedMatrixStats",
+          "limma", "SingleCellExperiment",
+          "SummarizedExperiment",
+          "slingshot", "batchelor",
+          "clustree", "edgeR"))  
+
 Set up your R environment and ensure all required dependencies are installed.
 
-Usage
+# Usage
+
 To utilize the provided scripts and workflows for scRNA-seq analysis, follow these general steps:
 
 Data Preparation: Prepare your scRNA-seq raw data files (e.g., read count matrices) and associated metadata.
@@ -56,7 +68,9 @@ Configuration: Modify configuration files or script parameters to specify file p
 
 Preprocessing: Run preprocessing scripts to filter cells, normalize expression data, identify highly variable genes, and perform batch correction if necessary.
 
-Dimensionality Reduction: Perform dimensionality reduction techniques such as Principal Component Analysis (PCA), t-Distributed Stochastic Neighbor Embedding (t-SNE), or Uniform Manifold Approximation and Projection (UMAP).
+Dimensionality Reduction: Perform dimensionality reduction techniques such as Principal Component Analysis (PCA), t-Distributed Stochastic Neighbor Embedding (t-SNE), or 
+
+Uniform Manifold Approximation and Projection (UMAP).
 
 Clustering: Cluster cells based on their gene expression profiles using algorithms like K-means, DBSCAN, or hierarchical clustering.
 
@@ -66,37 +80,46 @@ Visualization: Visualize analysis results using various plotting techniques incl
 
 For detailed instructions on running each script and workflow, refer to the README files and documentation provided within each directory.
 
-Workflow Overview
+# Workflow Overview
+
 Data Preprocessing:
 
 Quality control
+
 Filtering
+
 Normalization
-Batch correction (if applicable)
+
 Dimensionality Reduction:
 
 Principal Component Analysis (PCA)
+
 t-Distributed Stochastic Neighbor Embedding (t-SNE)
+
 Uniform Manifold Approximation and Projection (UMAP)
+
 Clustering:
 
 K-means clustering
-DBSCAN
-Hierarchical clustering
+
 Differential Expression Analysis:
 
-Wilcoxon rank-sum test
-Likelihood ratio test
 Visualization:
 
 Heatmaps
-Scatterplots
-Violin plots
-Feature plots
-Contributing
-Contributions to this repository are welcome! If you have suggestions for improvements, new features, or bug fixes, feel free to open an issue or submit a pull request.
 
-License
+Scatterplots
+
+Violin plots
+
+Feature plots
+
+# Contributing
+
+If you have suggestions for improvements, new features, or bug fixes, feel free to open an issue or submit a pull request.
+
+# License
+
 This project is licensed under the MIT License. You are free to use, modify, and distribute the code for your purposes.
 
 
