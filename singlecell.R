@@ -21,9 +21,9 @@ for (pkg in pkgs) {
   library(pkg, character.only = TRUE)
 }
 
-setwd("D:/SINGLE CELL ANALYSIS")
-datadirs <- file.path(".", sampleinfo$id)
-names(datadirs) <- gsub("_", "-", sampleinfo$id)
+setwd("path/to/directory")
+datadirs <- file.path(".", sampleinfo$samplenames)
+names(datadirs) <- gsub("_", "-", sampleinfo$samplenames)
 datadirs
 
 library(Seurat)
@@ -34,7 +34,6 @@ seu <- Seurat::CreateSeuratObject(counts = sparse_matrix,
                                   project = "Primary",
                                   min.cells = 3,
                                   min.features = 100)
-seu
 
 View(seu)
 
